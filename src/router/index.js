@@ -3,7 +3,7 @@ import LastPosts from "../components/LastPosts.vue";
 import Page from "../components/Page.vue";
 import Form from "../components/Form.vue";
 import Blog from "../components/Blog.vue";
-
+import ErrorComponent from "../components/ErrorComponent.vue";
 
 const routes = [
   {
@@ -13,7 +13,7 @@ const routes = [
   },
   {
     path: "/home",
-    name: "Posts",
+    name: "Home",
     component: LastPosts,
   },
   {
@@ -35,6 +35,10 @@ const routes = [
     path: "/blog",
     name: "Blog",
     component: Blog,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: ErrorComponent,
   }
 ];
 
