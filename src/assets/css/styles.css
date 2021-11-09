@@ -94,9 +94,19 @@ body {
     transition: 300ms all;
 }
 
+.provisional{
+    color: #ff0000;
+    font-weight: bold;
+}
 
-#menu a:hover{
-    color: #f13e3e;
+.provisional-green{
+    color: #0c7515;
+    font-weight: bold;
+}
+
+#menu a:hover,
+#menu .active{
+    color: #1c8b3d;
 }
 
 #slider{

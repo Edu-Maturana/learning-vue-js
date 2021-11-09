@@ -4,11 +4,12 @@ import Page from "../components/Page.vue";
 import Form from "../components/Form.vue";
 import Blog from "../components/Blog.vue";
 import ErrorComponent from "../components/ErrorComponent.vue";
+import Peliculas from "../components/Peliculas.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Homepage",
     component: LastPosts,
   },
   {
@@ -20,6 +21,11 @@ const routes = [
     path: "/posts",
     name: "Posts",
     component: LastPosts,
+  },
+  {
+    path: "/peliculas",
+    name: "Peliculas",
+    component: Peliculas,
   },
   {
     path: "/page/:id?",
