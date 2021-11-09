@@ -1,38 +1,24 @@
 <template>
   <section id="content">
-    <h2 class="subheader">Últimos artículos</h2>
+    <h2 class="subheader">Peliculas</h2>
 
     <!--Listado articulos-->
     <div id="articles">
-      <article
-        :key="pelicula.id"
-        v-for="pelicula in peliculas"
-        class="article-item"
-        id="article-template"
-      >
-        <div class="image-wrap">
-          <img :src="pelicula.imagen" :title="pelicula.titulo" />
-        </div>
-
-        <h2>{{ pelicula.titulo }}</h2>
-        <span class="date" :class="{
-            green: pelicula.year >= 2018,
-            red: pelicula.year < 2018}"> 
-            {{pelicula.year}}
-        </span>
-        <a href="#">Leer más</a>
-
-        <div class="clearfix"></div>
-      </article>
-
+      <div :key="pelicula.id" v-for="pelicula in peliculas">
+        <Pelicula :pelicula="pelicula" />
+      </div>
       <!--AÑADIR ARTICULOS VIA JS-->
     </div>
   </section>
 </template>
 
 <script>
+import Pelicula from "../components/Pelicula.vue";
 export default {
   name: "Peliculas",
+  components: {
+    Pelicula,
+  },
   data() {
     return {
       peliculas: [
